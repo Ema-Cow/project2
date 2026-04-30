@@ -18,104 +18,115 @@ const sixsevenbutton = document.getElementById("67button");
 const plusbutton = document.getElementById("plus")
 const equalbutton = document.getElementById("equal")
 let Like = 0
-
+let memory = 0
+let answer = 0
 
 //functions
 
+function show(something){
+     counter.textContent = "🩷" + something;
+}
+
+
 function likes(event) {
   Like = Like + 1
-    counter.textContent = "🩷" + Like;
+    show(Like);
 
   console.log("event =", event);
 }
 
 function dislikes(){
     Like = Like - 1;
-    counter.textContent = "🩷" + Like;
+    show(Like);
    
 }
 
 function clear(){
     Like = 0
-    counter.textContent = "🩷" + Like;
+    show(Like);
 
 }
 
 function one(){
     Like = Like*10 + 1;
-    counter.textContent = "🩷" + Like;
+    show(Like);
 
 }
 
 function two(){
     Like = Like*10 + 2;
-    counter.textContent = "🩷" + Like;
+    show(Like);
 
 }
 
 function three(){
     Like = Like*10 + 3;
-    counter.textContent = "🩷" + Like;
+    show(Like);
 
 }
 
 function four(){
     Like = Like*10 + 4;
-    counter.textContent = "🩷" + Like;
+    show(Like);
 
 }
 
 function five(){
     Like = Like*10 + 5;
-    counter.textContent = "🩷" + Like;
+    show(Like);
 
 }
 
 function six(){
     Like = Like*10 + 6;
-    counter.textContent = "🩷" + Like;
+    show(Like);
 
 }
 
 function seven(){
     Like = Like*10 + 7;
-    counter.textContent = "🩷" + Like;
+    show(Like);
 
 }
 
 function eight(){
     Like = Like*10 + 8;
-    counter.textContent = "🩷" + Like;
+   show(Like);
 
 }
 
 function nine(){
     Like = Like*10 + 9;
-    counter.textContent = "🩷" + Like;
+    show(Like);
 
 }
 
 function zero(){
     Like = Like*10 + 0;
-    counter.textContent = "🩷" + Like;
+    show(Like);
 
 }
 
 function sixseven(){
-    Like = 67
+    Like = 67;
     counter.textContent = "🤷" + Like;
 
 }
 
-function plus(){
-    Like = Like + "+"
+function plus(event){
+    memory = Like ;
+    Like = 0;
+    show(memory);
 }
 
-function equal(){
-    Like = Like + Like
+function equal(event){
+   answer = memory + Like;
+    show(answer);
 }
 
-  
+
+
+
 //Event Listeners
 Cbutton.addEventListener("click", likes);
 Nbutton.addEventListener("click", dislikes);
@@ -131,7 +142,8 @@ eightbutton.addEventListener("click", eight);
 ninebutton.addEventListener("click", nine);
 zerobutton.addEventListener("click", zero);
 sixsevenbutton.addEventListener("click", sixseven);
-
+plusbutton.addEventListener("click", plus)
+equalbutton.addEventListener("click", equal)
 
 
 /*

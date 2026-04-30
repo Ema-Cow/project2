@@ -70,23 +70,29 @@ footer {
   background-image: linear-gradient(to bottom, rgb(115, 142, 172), rgb(70, 100, 153));
 }
 .light-mode #count{
-  border-color: rgb(255, 228, 138);
+  border-color: rgb(255, 235, 81);
 }
 
 #count {
+  background-color: rgb(255, 242, 97);
   border: 4px;
   border-color: rgb(127, 158, 184);
   border-style: solid;
   max-width: 140px;
+  border-radius: 20px;
 }
 
 #count-button {
   text-align: center;
 }
 
-#Count {
+#Lcounter {
+  background-color: rgb(255, 255, 255);
   text-align: right;
-  border: 3px;
-  border-color: rgb(145, 179, 209);
+  max-height:100px ;
+  border-width: 2px;
+  border-color: rgb(255, 250, 189);
   max-width: 130px;
+  border-style: solid;
+  border-radius: 7px
 }
